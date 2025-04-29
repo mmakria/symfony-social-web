@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All posts{% endblock %}
+{% block body %}
+
+    {% if posts | length %}
+        <div>
+
+            
+            {% for post in posts %}
+                <div>
+                    <a href="{{ path('app_micro_post_show', {post: post.id}) }}">{{ post.title }}</a>
+                </div>
+                <p>{{ post.text }}</p>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div>il n'y a pas de post en attente</div>
+
+    {% endif %}
+
+{% endblock %}
