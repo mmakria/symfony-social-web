@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-body{
-    background: #dc3545;
-}
+
 
 /* Form container */
 form {
@@ -13,6 +11,21 @@ form {
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     font-family: 'Segoe UI', sans-serif;
+}
+
+.cancel-form-button{
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: none;
+    font-family: 'Segoe UI', sans-serif;
+
+}
+
+input{
+    color: black;
+
 }
 
 /* Labels */
@@ -50,7 +63,6 @@ form select:focus {
 form button,
 form input[type="submit"] {
     display: inline-block;
-    background: #007bff;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -62,7 +74,7 @@ form input[type="submit"] {
 
 form button:hover,
 form input[type="submit"]:hover {
-    background: #0056b3;
+    background: #4946d9;
 }
 
 /* Error messages (if needed) */

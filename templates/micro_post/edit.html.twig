@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create New Post{% endblock %}
+{% block bread %}
+    > Edit
+{% endblock %}
+
+{% block body %}
+
+    {#    {{ form(form) }} #}
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+    <div>{{ form_errors(form) }}</div>
+
+    <div>{{ form_label(form.title, 'Enter the title') }}</div>
+    <div>{{ form_widget(form.title) }}</div>
+    <div class="form-error">{{ form_errors(form.title) }}</div>
+
+    <div>{{ form_label(form.text, 'Enter the text') }}</div>
+    <div>{{ form_widget(form.text) }}</div>
+
+    <div class="form-error">{{ form_errors(form.text) }}</div>
+    <div class="flex justify-center gap-6 ">
+        <div>{{ form_label(form.submit, 'Submitcece') }}</div>
+        <div>{{ form_widget(form.submit, {'attr':{'class': 'bg-green-400 rounded-md'}})}}</div>
+        {{ form_end(form) }}
+        {% if deleteForm is defined %}
+            {{ form(deleteForm, {'attr':{'class': 'cancel-form-button bg-red-400 rounded-md'}}) }}
+        {% endif %}
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+        {#        <a href="{{ path('app_micro_post_delete', {post: post.id}) }}"> #}
+        {#            Delete #}
+        {#        </a> #}
